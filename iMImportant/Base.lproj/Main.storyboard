@@ -1,25 +1,98 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iMImportant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GeI-eS-kzM">
+                                <rect key="frame" x="0.0" y="44" width="320" height="162"/>
+                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="20" width="400" height="162"/>
+                                </variation>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptI-JT-14G">
+                                <rect key="frame" x="16" y="518" width="231" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="231" id="EJu-Lv-vFr"/>
+                                    <constraint firstAttribute="height" constant="30" id="SA8-eR-Mbp"/>
+                                </constraints>
+                                <state key="normal" title="Test">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testPhrase" destination="BYZ-38-t0r" eventType="touchUpInside" id="dca-bQ-7wt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFa-q5-R66">
+                                <rect key="frame" x="73" y="518" width="231" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="231" id="c7o-I4-q2c"/>
+                                    <constraint firstAttribute="height" constant="30" id="ztW-Gb-xBJ"/>
+                                </constraints>
+                                <state key="normal" title="Do it!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirm" destination="BYZ-38-t0r" eventType="touchUpInside" id="XaC-Mj-RUi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjv-fa-hjz">
+                                <rect key="frame" x="119" y="214" width="82" height="30"/>
+                                <state key="normal" title="Play Phrase">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="159" y="190" width="82" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="playPhrase" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zlq-lg-rwi"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5m-cd-lHK">
+                                <rect key="frame" x="0.0" y="252" width="320" height="162"/>
+                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="228" width="400" height="162"/>
+                                </variation>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d5m-cd-lHK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="2tD-qE-Rfi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ptI-JT-14G" secondAttribute="bottom" constant="20" id="5VU-YJ-IEg"/>
+                            <constraint firstAttribute="centerX" secondItem="yjv-fa-hjz" secondAttribute="centerX" id="GyY-0J-pcZ"/>
+                            <constraint firstItem="ptI-JT-14G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ow6-h6-lib"/>
+                            <constraint firstItem="d5m-cd-lHK" firstAttribute="top" secondItem="yjv-fa-hjz" secondAttribute="bottom" constant="8" id="aq8-6i-3vV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d5m-cd-lHK" secondAttribute="trailing" constant="-16" id="chb-5a-gjc"/>
+                            <constraint firstItem="GeI-eS-kzM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="erz-RD-8mi"/>
+                            <constraint firstItem="GeI-eS-kzM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="gN8-Ij-VLh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GeI-eS-kzM" secondAttribute="trailing" constant="-16" id="nQb-Ye-kJy"/>
+                            <constraint firstItem="yjv-fa-hjz" firstAttribute="top" secondItem="GeI-eS-kzM" secondAttribute="bottom" constant="8" id="oN1-nE-Bu2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xFa-q5-R66" secondAttribute="bottom" constant="20" id="oVo-LF-v98"/>
+                            <constraint firstItem="xFa-q5-R66" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wqa-dx-st5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="intervalPicker" destination="d5m-cd-lHK" id="lEK-9m-SYb"/>
+                        <outlet property="phrasePicker" destination="GeI-eS-kzM" id="xBE-Ld-fuu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="802" y="364"/>
         </scene>
     </scenes>
 </document>
